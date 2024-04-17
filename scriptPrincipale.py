@@ -60,5 +60,9 @@ while True:
 
     datafile.write(str(x)+';'+str(temperature)+';'+str(pressure)+';'+str(humidity)+';'+str(lux)+';'+str(particulate)+';'+str(proximity)+';'+str(gasensor))
     datafile.close()
-    time.sleep(900) #valore in secondi, 1800 per registrare i dati ogni 30 minuti
+    if(x.hour==8 and x.minute<15):
+        secondiDelay=x.second+x.minute*60
+        timesleep(900-secondiDelay)
+    else:
+        time.sleep(900) #valore in secondi, 1800 per registrare i dati ogni 30 minuti
     datafile = open(name_datafile, "a")
