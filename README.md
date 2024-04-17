@@ -8,15 +8,15 @@ Questo progetto consiste in uno script Python per un Raspberry Pi che trasforma 
 
 # TO-DO codice
 - [ ] Per utilizzare lo script è necessario il possesso del sensore e delle librerie, gestire l'avvio di una versione di debug che lancia numeri randomici senza utilizzare ed importare le librerie del sensore così da poter provare il codice in autonomia
-- [ ] La prima misura ad ogni riavvio mostra sempre dati errati, bisogna ignorarla
+- [x] La prima misura ad ogni riavvio mostra sempre dati errati, bisogna ignorarla
 - [ ] La stazione in rete potrebbe inviare direttamente i dati in un google sheet (o in una coda mqtt) al posto di inserirli in un file locale
 - [ ] Il dato inserito nel file utilizza troppe cifre decimali, va vista la percentuale di errore sulla misura ed utilizzare solo le cifre significative
-- [ ] Il sensore Enviro+ può registrare altre misure oltre a temperatura pressione ed umidità, raccogliere anche quelle
-- [ ] Lo script perde qualche millisecondo ad ogni misurazione, queste si accumulano e col passare dei giorni le misure risultano sfasate, assicurarsi quindi che ogni giorno si ricominci esattamente allo stesso orario così da compensare 
+- [x] Il sensore Enviro+ può registrare altre misure oltre a temperatura pressione ed umidità, raccogliere anche quelle
+- [x] Lo script perde qualche millisecondo ad ogni misurazione, queste si accumulano e col passare dei giorni le misure risultano sfasate, assicurarsi quindi che ogni giorno si ricominci esattamente allo stesso orario così da compensare 
 
 # TO-DO pratico
 - [ ] Il sensore di temperatura inserito in modalità standard è troppo vicino al processore, questo falsa la misura di temperatura di diversi gradi. Allontanare il sensore attraverso cavetteria.
-- [ ] Il guscio protettivo del dispositivo è al momento insufficente e temporaneo, costruire una scatola protettiva che permetta al sensore di lavorare senza essere colpito dalla pioggia e che faccia defluire l'acqua che eventualmente entra nella protezione
+- [x] Il guscio protettivo del dispositivo è al momento insufficente e temporaneo, costruire una scatola protettiva che permetta al sensore di lavorare senza essere colpito dalla pioggia e che faccia defluire l'acqua che eventualmente entra nella protezione
 - [ ] La postazione in cui è posizionato il dispositivo è scialba, va abbellita e resa più gadevole
 
 # Dati
