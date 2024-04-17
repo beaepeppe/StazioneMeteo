@@ -40,9 +40,9 @@ temperature = bme280.get_temperature()
 pressure = bme280.get_pressure()
 humidity = bme280.get_humidity()
 lux = ltr559.get_lux()
-    proximity = ltr559.get_proximity()
-    gasensor = gas.read_all()
-    particulate = pms5003.read()
+proximity = ltr559.get_proximity()
+gasensor = gas.read_all()
+particulate = pms5003.read()
 time.sleep(3)
 
 while True:
@@ -62,7 +62,7 @@ while True:
     datafile.close()
     if(x.hour==8 and x.minute<15):
         secondiDelay=x.second+x.minute*60
-        timesleep(900-secondiDelay)
+        time.sleep(900-secondiDelay)
     else:
         time.sleep(900) #valore in secondi, 1800 per registrare i dati ogni 30 minuti
     datafile = open(name_datafile, "a")
