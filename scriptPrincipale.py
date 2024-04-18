@@ -66,3 +66,13 @@ while True:
     else:
         time.sleep(900) #valore in secondi, 1800 per registrare i dati ogni 30 minuti
     datafile = open(name_datafile, "a")
+
+def calcola_cifre_significative(numero, errore):
+    cifre_significative = len(str(numero)) - len(str(errore))
+    return round(numero, cifre_significative)
+
+numero = 3.14159265358979323846
+errore = 0.0001
+
+numero_corretto = calcola_cifre_significative(numero, errore)
+print(numero_corretto)
